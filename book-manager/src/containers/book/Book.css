@@ -1,0 +1,108 @@
+.Book {
+  margin: auto;
+  width: 80%;
+}
+a.button {
+  margin: 0 20px;
+  background-color: transparent;
+  border: none;
+  border-radius: 20px;
+  color: #f2f2f2;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1px;
+  padding: 9px;
+  position: absolute;
+  top: 20px;
+  outline: none;
+  transition: background-color 0.2s;
+}
+a.button:hover,
+a.button:focus {
+  background-color: #333;
+}
+a.button:active {
+  background-color: #444;
+}
+form {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px 25px;
+  margin: 20px;
+}
+form div {
+  padding: 5px 0;
+}
+form .full {
+  grid-column: span 2;
+}
+form .right {
+  text-align: right;
+}
+label {
+  color: #888;
+}
+label:focus-within {
+  color: #48a;
+}
+input,
+select,
+button {
+  border: none;
+  border-bottom: 2px solid #ddd;
+  box-sizing: border-box;
+  font-size: 16px;
+  outline: none;
+  padding: 10px 10px 5px 10px;
+  width: 100%;
+}
+input:hover,
+select:hover,
+button:hover {
+  border-bottom-color: #aaa;
+}
+input:focus,
+select:focus,
+button:focus,
+input:active,
+select:active,
+button:active {
+  border-bottom-color: #48a;
+}
+input:focus + label,
+select:focus + label,
+button:focus + label,
+input:active + label,
+select:active + label,
+button:active + label {
+  color: #48a;
+}
+button[type='submit'] {
+  background-color: #48a;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  color: #f2f2f2;
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 22px;
+  margin: 10px 0;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  width: auto;
+  transition: background-color 0.1s, box-shadow 0.2s;
+}
+button[type='submit']:hover,
+button[type='submit']:focus {
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+}
+button[type='submit']:active {
+  background-color: #379;
+}
+button[type='submit'] svg {
+  vertical-align: bottom;
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+}

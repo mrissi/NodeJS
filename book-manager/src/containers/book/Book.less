@@ -1,0 +1,109 @@
+.Book {
+  margin: auto;
+  width: 80%;
+}
+
+a.button {
+  margin: 0 20px;
+  background-color: transparent;
+  border: none;
+  border-radius: 20px;
+  color: #f2f2f2;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1px;
+  padding: 9px;
+  position: absolute;
+  top: 20px;
+  outline: none;
+  transition: background-color .2s;
+
+  &:hover, &:focus {
+    background-color: #333;
+  }
+
+  &:active {
+    background-color: #444;
+  }
+}
+
+form {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px 25px;
+  margin: 20px;
+
+  div {
+    padding: 5px 0;
+  }
+
+  .full {
+    grid-column: span 2;
+  }
+
+  .right {
+    text-align: right;
+  } 
+}
+
+label {
+  color: #888;
+
+  &:focus-within {
+    color: #48a;
+  }
+}
+
+input, select, button {
+  border: none;
+  border-bottom: 2px solid #ddd;
+  box-sizing: border-box;
+  font-size: 16px;
+  outline: none;
+  padding: 10px 10px 5px 10px;
+  width: 100%;
+
+  &:hover {
+    border-bottom-color: #aaa;
+  }
+
+  &:focus, &:active {
+    border-bottom-color: #48a;
+
+    + label {
+      color: #48a;
+    }
+  }
+}
+
+button[type='submit'] {
+  background-color: #48a;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .4);
+  color: #f2f2f2;
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 22px;
+  margin: 10px 0;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  width: auto;
+  transition: background-color .1s, box-shadow .2s;
+
+  &:hover, &:focus {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .4);
+  }
+
+  &:active {
+    background-color: #379;
+  }
+
+  svg {
+    vertical-align: bottom;
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+  }
+}
