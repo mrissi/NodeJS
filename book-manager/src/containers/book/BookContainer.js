@@ -30,7 +30,7 @@ class BookContainer extends Component {
   }
 
   async loadBook (bookId) {
-    const res = await fetch(`http://localhost:8080/books/${bookId}`)
+    const res = await fetch(`https://book-api-target.herokuapp.com/books/${bookId}`)
     const book = await res.json()
 
     const {
@@ -74,13 +74,13 @@ class BookContainer extends Component {
     let res = { ok: false }
 
     if (_id) {
-      res = await fetch(`http://localhost:8080/books/${_id}`, {
+      res = await fetch(`https://book-api-target.herokuapp.com/books/${_id}`, {
         headers: { 'Content-Type': 'application/json' },
         method: 'put',
         body: JSON.stringify(book)
       })
     } else {
-      res = await fetch('http://localhost:8080/books', {
+      res = await fetch('https://book-api-target.herokuapp.com/books', {
         headers: { 'Content-Type': 'application/json' },
         method: 'post',
         body: JSON.stringify(book)

@@ -18,7 +18,7 @@ class HomeContainer extends Component {
   }
 
   async loadBooks () {
-    const res = await fetch('http://localhost:8080/books')
+    const res = await fetch('https://book-api-target.herokuapp.com/books')
     const books = await res.json()
 
     this.setState(() => ({
@@ -30,7 +30,7 @@ class HomeContainer extends Component {
     const confirmation = confirm('Do you confirm?')
 
     if (confirmation) {
-      const res = await fetch(`http://localhost:8080/books/${bookId}`, { method: 'delete' })
+      const res = await fetch(`https://book-api-target.herokuapp.com/books/${bookId}`, { method: 'delete' })
       if (res.ok) {
         this.loadBooks()
       } else {

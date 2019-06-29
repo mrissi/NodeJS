@@ -3,6 +3,7 @@ const express = require('express');
 const { estados } = require('./../models/mongo')
 const router = express.Router();
 const cidadesRouter = require('./cidades')
+const validarEstado = require('./../validation/estado')
 
 router.get('/', async (req, res) => {
     //res.json(ESTADOS)
@@ -15,7 +16,7 @@ router.post('/', async (req, res) => {
     const { sigla, nome } = req.body
     const estado = { sigla, nome }
 
-    if (!sigla || !nome) {
+    if (!(await validarEstado(estado))) {
         return res.status(400).send('Sigla e Nome são obrigatóros.')
     }
 
